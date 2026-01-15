@@ -1,0 +1,93 @@
+/* CARD PADRÃO */
+.artigo-card {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: block;
+}
+
+.artigo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.artigo-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #6a4fa3;
+}
+
+.artigo-card p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #444;
+}
+
+.artigo-card .categoria {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 0.8rem;
+  color: #fff;
+  background: #A77ACF;
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+/* ============================= */
+/* CARD DESTAQUE (HOME) */
+/* ============================= */
+
+.artigo-card.destaque {
+  position: relative;
+  margin-bottom: 48px;
+  padding: 48px 48px 44px 72px;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.14);
+  overflow: hidden;
+}
+
+/* MANCHA DECORATIVA (AJUSTADA) */
+/* .artigo-card.destaque::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -90px;
+  transform: translateY(-50%);
+  width: 220px;
+  height: 220px;
+  background: linear-gradient(
+    135deg,
+    rgba(245, 199, 199, 0.8),
+    rgba(191, 161, 217, 0.8)
+  );
+  border-radius: 50%;
+  opacity: 0.6;
+} */
+
+/* CONTEÚDO ACIMA DA MANCHA */
+.artigo-card.destaque h2 {
+  font-size: 2rem;
+  margin-bottom: 18px;
+  color: #6a4fa3;
+  position: relative;
+  z-index: 1;
+}
+
+.artigo-card.destaque p {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  max-width: 720px;
+  position: relative;
+  z-index: 1;
+}
+
+.artigo-card.destaque .categoria {
+  margin-top: 18px;
+  position: relative;
+  z-index: 1;
+}

@@ -1,0 +1,32 @@
+body { 
+  font-family: 'Merriweather', serif;
+  /* background: #ffffff; */
+  color: #333;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* manchas suaves no fundo */
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.35;
+  z-index: -1;
+}
+
+body::before {
+  background: #BDE5F2;
+  top: -150px;
+  left: -150px;
+}
+
+body::after {
+  background: #F5C7C7;
+  bottom: -150px;
+  right: -150px;
+}
