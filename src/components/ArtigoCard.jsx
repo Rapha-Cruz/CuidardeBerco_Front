@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import './artigoCard.css'
+import './ArtigoCard.css'
 
 export default function ArtigoCard({ artigo, destaque }) {
   return (
