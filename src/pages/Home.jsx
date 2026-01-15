@@ -4,7 +4,7 @@ import Layout from '../components/Layout'
 import { listarArtigos } from '../services/artigosService'
 import ArtigoCard from '../components/ArtigoCard'
 import Busca from '../components/Busca'
-import './home.css'
+import './Home.css'
 
 export default function Home() {
   const [artigos, setArtigos] = useState([])
