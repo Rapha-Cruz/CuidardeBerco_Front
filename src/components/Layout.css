@@ -27,7 +27,7 @@ body {
   align-items: stretch;
 }
 
-/* ================= SIDEBAR ================= */
+/* ================= SIDEBAR (DESKTOP) ================= */
 .sidebar {
   width: 220px;
   background: rgba(228, 215, 228, 0.9);
@@ -37,10 +37,9 @@ body {
 
   display: flex;
   flex-direction: column;
-}
 
-.sidebar.aberta {
-  left: 0;
+  position: relative;
+  /* 👈 ESSENCIAL PARA DESKTOP */
 }
 
 /* ================= CONTEÚDO PRINCIPAL ================= */
@@ -53,10 +52,12 @@ body {
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
+
   .content {
     flex-direction: column;
   }
 
+  /* Sidebar vira menu sanduíche */
   .sidebar {
     position: fixed;
     top: 0;
@@ -74,11 +75,13 @@ body {
     left: 0;
   }
 
+  /* Conteúdo ocupa tudo */
   .conteudo {
     padding: 20px 16px 60px;
     max-width: 100%;
   }
 
+  /* Evita quebra de layout */
   img,
   iframe {
     max-width: 100%;
