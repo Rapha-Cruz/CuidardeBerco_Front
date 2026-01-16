@@ -1,0 +1,20 @@
+.sidebar {
+  width: 220px;
+  background: rgba(228, 215, 228, 0.9);
+  padding: 28px 20px;
+  border-right: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-principal {
+  font-size: 17px;
+  font-weight: 600;
+  color: #5b3f8f;
+  padding: 6px 8px;
+  text-decoration: none;
+}
+
+.menu-principal:hover {
+  background: rgba(167, 122, 207, 0.15);
+}

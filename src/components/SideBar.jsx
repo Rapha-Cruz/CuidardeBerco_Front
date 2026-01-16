@@ -63,6 +63,7 @@
 //     </aside>
 //   )
 // }
+import './Sidebar.css'
 import { useEffect, useState } from 'react'
 import { NavLink, Link, useLocation } from 'react-router-dom'
 import { listarCategorias } from '../services/categoriasService'
