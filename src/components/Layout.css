@@ -12,22 +12,20 @@ body {
   overflow-x: hidden;
 }
 
-/* ================= LAYOUT BASE ================= */
+/* ================= LAYOUT ================= */
 .layout {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
 }
 
-/* ================= CONTEÚDO ================= */
+/* ================= CONTENT ================= */
 .content {
   display: flex;
   flex: 1;
-  align-items: stretch;
 }
 
-/* ================= SIDEBAR (DESKTOP) ================= */
+/* ================= SIDEBAR DESKTOP (ORIGINAL) ================= */
 .sidebar {
   width: 220px;
   background: rgba(228, 215, 228, 0.9);
@@ -38,11 +36,15 @@ body {
   display: flex;
   flex-direction: column;
 
-  position: relative;
-  /* 👈 ESSENCIAL PARA DESKTOP */
+  position: relative; /* 👈 desktop normal */
 }
 
-/* ================= CONTEÚDO PRINCIPAL ================= */
+/* botão fechar NÃO aparece no desktop */
+.fechar-menu {
+  display: none;
+}
+
+/* ================= CONTEÚDO ================= */
 .conteudo {
   flex: 1;
   padding: 40px 32px 80px;
@@ -68,20 +70,28 @@ body {
     background: #fff;
     z-index: 1300;
     transition: left 0.3s ease;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
   }
 
   .sidebar.aberta {
     left: 0;
   }
 
-  /* Conteúdo ocupa tudo */
+  /* Botão fechar só no mobile */
+  .fechar-menu {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 22px;
+    margin-bottom: 16px;
+    cursor: pointer;
+  }
+
   .conteudo {
     padding: 20px 16px 60px;
     max-width: 100%;
   }
 
-  /* Evita quebra de layout */
   img,
   iframe {
     max-width: 100%;
