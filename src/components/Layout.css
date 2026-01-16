@@ -185,3 +185,104 @@ body {
   font-size: 1rem;
   color: #444;
 }
+
+
+/* =====================
+   BOTÃO MENU MOBILE
+===================== */
+.menu-toggle {
+  display: none;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  /* Layout vira coluna */
+  .content {
+    flex-direction: column;
+  }
+
+  /* Sidebar some no mobile
+  .sidebar {
+    display: none;
+  } */
+
+  /* Conteúdo ocupa tudo */
+  .conteudo {
+    padding: 20px 16px 60px;
+    max-width: 100%;
+  }
+
+  /* Header menor */
+  .header {
+    height: auto;
+    padding: 16px;
+  }
+
+  .header h1 {
+    font-size: 22px;
+  }
+
+  .artigo-conteudo {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* Evita estouro de imagens e iframes no mobile */
+  img,
+  iframe {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 1200;
+    font-size: 26px;
+    background: #A77ACF;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    max-width: 280px;
+    height: 100vh;
+    background: #fff;
+    z-index: 1300;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .sidebar.aberta {
+    left: 0;
+  }
+
+  .conteudo {
+    margin-left: 0 !important;
+    width: 100%;
+    padding: 16px;
+  }
+
+  .fechar-menu {
+    background: none;
+    border: none;
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 769px) {
+  .fechar-menu {
+    display: none;
+  }
+}
