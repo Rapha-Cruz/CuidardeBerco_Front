@@ -2,52 +2,61 @@
 .header {
   background: linear-gradient(90deg, #BFA1D9, #A77ACF);
   padding: 20px 32px;
-  border-bottom: none;
   border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 /* Container do logo + texto */
 .logo-area {
-  max-width: 1400px;
-  margin: 0 auto;
-
   display: flex;
   align-items: center;
-  gap: 22px; /* MAIS espaço entre logo e texto */
-  text-decoration: none;
+  gap: 22px;
 }
-
 
 /* TEXTO PRINCIPAL */
 .logo-texto {
-  font-family: 'Nunito', system-ui, sans-serif; /* mais suave e maternal */
-  font-size: 2.1rem; /* maior, mais presença */
+  font-family: 'Nunito', system-ui, sans-serif;
+  font-size: 2.1rem;
   font-weight: 700;
   color: #ffffff;
   letter-spacing: 0.4px;
   line-height: 1.1;
 }
 
-/* SUBTÍTULO (opcional no futuro) */
-.logo-subtitulo {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.85);
-  margin-top: 4px;
-}
-
-/* ===== HEADER ===== */
-.header {
-  background: linear-gradient(90deg, #BFA1D9, #A77ACF);
-  padding: 24px 32px;
-}
-
-
 /* LOGO */
 .logo-area img {
-  height: 96px;      /* 👈 AQUI o logo fica GRANDE */
+  height: 96px;
   width: auto;
   object-fit: contain;
-    border-radius: 80px;
+  border-radius: 80px;
 }
 
+/* ===== BOTÃO MENU ===== */
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Desktop: botão pode aparecer ou não (sua escolha) */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .logo-area img {
+    height: 56px;
+  }
+
+  .logo-texto {
+    font-size: 1.4rem;
+  }
+}

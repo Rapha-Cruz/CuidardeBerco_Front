@@ -1,23 +1,3 @@
-// import Header from './Header'
-// import Sidebar from './SideBar'
-// import './Layout.css'
-
-// export default function Layout({ children }) {
-//   return (    
-//     <div className="layout">
-//       <Header />
-//       <div className="content">
-//         <Sidebar />        
-//         <main className="conteudo">
-//           {children}
-//         </main>
-//       </div>
-      
-//     </div>
-//   )
-// }
-
-
 import { useState } from 'react'
 import Header from './Header'
 import Sidebar from './SideBar'
@@ -28,16 +8,7 @@ export default function Layout({ children }) {
 
   return (
     <div className="layout">
-      {/* Botão sanduíche */}
-      <button
-        className="menu-toggle"
-        onClick={() => setMenuAberto(true)}
-        aria-label="Abrir menu"
-      >
-        ☰
-      </button>
-
-      <Header />
+      <Header onMenuClick={() => setMenuAberto(true)} />
 
       <div className="content">
         <Sidebar
