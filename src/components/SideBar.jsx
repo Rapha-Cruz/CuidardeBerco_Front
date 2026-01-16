@@ -90,16 +90,19 @@ export default function Sidebar({ aberto, onClose }) {
 
   return (
     <aside className={`sidebar ${aberto ? 'aberta' : ''}`}>
-      {/* BOTÃO FECHAR (mobile) */}
-      <button className="fechar-menu" onClick={onClose}>
+      {/* Botão fechar (mobile) */}
+      <button
+        className="fechar-menu"
+        onClick={onClose}
+        aria-label="Fechar menu"
+      >
         ✕
       </button>
 
-      <nav>
+      <nav onClick={onClose}>
         <Link
           to="/"
           className={`menu-principal ${homeAtivo ? 'active' : ''}`}
-          onClick={onClose}
         >
           Home
         </Link>
@@ -113,7 +116,6 @@ export default function Sidebar({ aberto, onClose }) {
             key={categoria.id}
             to={`/?categoria=${categoria.id}`}
             className="menu-categoria"
-            onClick={onClose}
           >
             {categoria.nome}
           </NavLink>
@@ -123,7 +125,6 @@ export default function Sidebar({ aberto, onClose }) {
           to="/sobre"
           className="menu-principal"
           style={{ marginTop: 20 }}
-          onClick={onClose}
         >
           Sobre
         </NavLink>

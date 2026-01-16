@@ -28,15 +28,16 @@ export default function Layout({ children }) {
 
   return (
     <div className="layout">
-      <Header />
-
-      {/* BOTÃO MENU MOBILE */}
+      {/* Botão sanduíche */}
       <button
         className="menu-toggle"
         onClick={() => setMenuAberto(true)}
+        aria-label="Abrir menu"
       >
         ☰
       </button>
+
+      <Header />
 
       <div className="content">
         <Sidebar
@@ -44,7 +45,10 @@ export default function Layout({ children }) {
           onClose={() => setMenuAberto(false)}
         />
 
-        <main className="conteudo">
+        <main
+          className="conteudo"
+          onClick={() => menuAberto && setMenuAberto(false)}
+        >
           {children}
         </main>
       </div>
