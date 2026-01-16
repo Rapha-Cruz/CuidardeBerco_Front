@@ -4,3 +4,46 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  /* Layout vira coluna */
+  .content {
+    flex-direction: column;
+  }
+
+  /* Sidebar some no mobile */
+  .sidebar {
+    display: none;
+  }
+
+  /* Conteúdo ocupa tudo */
+  .conteudo {
+    padding: 20px 16px 60px;
+    max-width: 100%;
+  }
+
+  /* Header menor */
+  .header {
+    height: auto;
+    padding: 16px;
+  }
+
+  .header h1 {
+    font-size: 22px;
+  }
+
+  .artigo-conteudo {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* Evita estouro de imagens e iframes no mobile */
+  img,
+  iframe {
+    max-width: 100%;
+    height: auto;
+  }
+
+}
